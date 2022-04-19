@@ -1,0 +1,45 @@
+:root {
+  --body-margin: 20px;
+  --grid-gap: 10px;
+  --slots-per-row: 2;
+}
+
+body {
+  margin: var(--body-margin);
+  height: calc(100vh - 2 * var(--body-margin));
+}
+
+#wrapper {
+  height: 100%;
+}
+
+.ui-grid {
+  /* background-color: #fec; */
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--grid-gap);
+}
+
+.ui-slot {
+  /* background-color: #f80; */
+  height: calc((100% - var(--grid-gap)) / 2);
+  width: calc((100% - (var(--slots-per-row) - 1) * var(--grid-gap)) /
+    var(--slots-per-row));
+}
+
+.ui-item {
+  position: absolute;
+  background-color: #f68;
+  transition: 300ms;
+  border: 5px solid red
+}
+
+@media (max-width: 700px) {
+  :root {
+    --slots-per-row: 3;
+  }
+  .ui-slot:first-child {
+    width: 100%;
+  }
+}
