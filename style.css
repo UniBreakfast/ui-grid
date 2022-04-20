@@ -23,9 +23,23 @@ body {
 
 .ui-item {
   position: absolute;
-  background-color: #f68;
   transition: 300ms;
+}
+:nth-child(1)>.ui-item {
+  background-color: lightcoral;
   border: 5px solid red;
+}
+:nth-child(2)>.ui-item {
+  background-color: lightblue;
+  border: 5px solid teal;
+}
+:nth-child(3)>.ui-item {
+  background-color: lightgreen;
+  border: 5px solid green;
+}
+:nth-child(4)>.ui-item {
+  background-color: lightgoldenrodyellow;
+  border: 5px solid gold;
 }
 
 @media (max-width: 700px) {
